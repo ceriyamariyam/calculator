@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class divActivity extends AppCompatActivity {
-    EditText e1,e2;
+    EditText e1,e2,e3;
     Button b1,b2;
     String s1,s2,s3;
     int x,y,z;
@@ -20,6 +20,7 @@ public class divActivity extends AppCompatActivity {
         setContentView(R.layout.activity_div);
         e1=(EditText)findViewById(R.id.dn1);
         e2=(EditText)findViewById(R.id.dn2);
+        e3=(EditText)findViewById(R.id.re1);
         b1=(Button)findViewById(R.id.div);
         b2=(Button)findViewById(R.id.bk4);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +32,9 @@ public class divActivity extends AppCompatActivity {
                 y=Integer.parseInt(s2);
                 z=x/y;
                 s3=String.valueOf(z);
-                Toast.makeText(getApplicationContext(),s3,Toast.LENGTH_LONG).show();
+                e3.setVisibility(view.VISIBLE);
+                e3.setText(s3);
+//                Toast.makeText(getApplicationContext(),s3,Toast.LENGTH_LONG).show();
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {

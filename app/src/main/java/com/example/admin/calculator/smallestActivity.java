@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class smallestActivity extends AppCompatActivity {
-    EditText e1,e2,e3;
+    EditText e1,e2,e3,e4;
     Button b1,b2;
     String s1,s2,s3;
     int n1,n2,n3;
@@ -21,6 +21,7 @@ public class smallestActivity extends AppCompatActivity {
         e1=(EditText)findViewById(R.id.sn1);
         e2=(EditText)findViewById(R.id.sn2);
         e3=(EditText)findViewById(R.id.sn3);
+        e4=(EditText)findViewById(R.id.re5);
         b1=(Button)findViewById(R.id.smal);
         b2=(Button)findViewById(R.id.bk6);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -33,13 +34,19 @@ public class smallestActivity extends AppCompatActivity {
                 n2=Integer.parseInt(s2);
                 n3=Integer.parseInt(s3);
                 if ((n1<n2)  &&  (n1<n3)) {
-                    Toast.makeText(getApplicationContext(), s1, Toast.LENGTH_LONG).show();
+                    e4.setVisibility(view.VISIBLE);
+                    e4.setText(s1);
+//                    Toast.makeText(getApplicationContext(), s1, Toast.LENGTH_LONG).show();
                 }
                 else if ((n2<n1)  &&  (n2<n3)) {
-                    Toast.makeText(getApplicationContext(), s2, Toast.LENGTH_LONG).show();
+                    e4.setVisibility(view.VISIBLE);
+                    e4.setText(s2);
+//                    Toast.makeText(getApplicationContext(), s2, Toast.LENGTH_LONG).show();
                 }
                 else if ((n3<n1)  &&  (n3<n2)) {
-                    Toast.makeText(getApplicationContext(), s3, Toast.LENGTH_LONG).show();
+                    e4.setVisibility(view.VISIBLE);
+                    e4.setText(s3);
+//                    Toast.makeText(getApplicationContext(), s3, Toast.LENGTH_LONG).show();
 
 
                 }

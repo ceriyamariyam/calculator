@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class mulActivity extends AppCompatActivity {
-EditText e1,e2;
+EditText e1,e2,e3;
     Button b1,b2;
     String s1,s2,s3;
     int x,y,z;
@@ -19,6 +19,7 @@ EditText e1,e2;
         setContentView(R.layout.activity_mul);
         e1=(EditText)findViewById(R.id.mn1);
         e2=(EditText)findViewById(R.id.mn2);
+        e3=(EditText)findViewById(R.id.re4);
         b1=(Button)findViewById(R.id.mul);
         b2=(Button)findViewById(R.id.bk3);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -30,7 +31,9 @@ EditText e1,e2;
                 y=Integer.parseInt(s2);
                 z=x*y;
                 s3=String.valueOf(z);
-                Toast.makeText(getApplicationContext(),s3,Toast.LENGTH_LONG).show();
+                e3.setVisibility(view.VISIBLE);
+                e3.setText(s3);
+//                Toast.makeText(getApplicationContext(),s3,Toast.LENGTH_LONG).show();
             }
         });
         b2.setOnClickListener(new View.OnClickListener() {

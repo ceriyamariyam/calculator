@@ -37,6 +37,12 @@
         android:layout_height="wrap_content"
         android:text="back"
         android:id="@+id/bk5"/>
+    <EditText
+        android:editable="false"
+        android:visibility="gone"
+        android:id="@+id/re3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

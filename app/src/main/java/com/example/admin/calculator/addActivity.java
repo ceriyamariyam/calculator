@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class addActivity extends AppCompatActivity {
-EditText e1,e2,e3;
+EditText e1,e2,e3,e4;
     Button b1,b2;
     String s1,s2,s3,s4;
     int w,x,y,z;
@@ -20,6 +20,8 @@ EditText e1,e2,e3;
         e1=(EditText)findViewById(R.id.an1);
         e2=(EditText)findViewById(R.id.an2);
         e3=(EditText)findViewById(R.id.an3);
+        e4=(EditText)findViewById(R.id.re);
+
         b1=(Button)findViewById(R.id.add1);
         b2=(Button)findViewById(R.id.bk1);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -33,7 +35,9 @@ EditText e1,e2,e3;
                 y=Integer.parseInt(s3);
                 z=w+x+y;
                 s4=String.valueOf(z);
-                Toast.makeText(getApplicationContext(),s4,Toast.LENGTH_LONG).show();
+                e4.setVisibility(view.VISIBLE);
+                e4.setText(s4);
+//                Toast.makeText(getApplicationContext(),s4,Toast.LENGTH_LONG).show();
 
 
             }
